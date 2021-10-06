@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main()
+
+
+{
+	char opt;
+	double n1, n2, res;
+	
+	printf("enter first number: ");
+	scanf_s("%lf", &n1);
+
+	printf("enter operator: ");
+	scanf_s(" %c", &opt);
+
+	printf("enter second number: ");
+	scanf_s("%lf", &n2);
+
+	switch (opt)
+	{
+	case '+':
+		res = n1 + n2;
+		printf("result: %lf ", res);
+		break;
+
+	case '-':
+		res = n1 - n2;
+		printf("result: %lf ", res);
+		break;
+
+	case '*':
+		res = n1 * n2;
+		printf("result: %lf ", res);
+		break;
+
+	case '/':
+		if (n2 == 0)
+		{
+			printf("divider can't be 0, please enter another number: ");
+			scanf_s("%lf", &n2);
+		}
+		res = n1 / n2;
+		printf("result: %lf", res);
+		break;
+
+	default:
+		printf("error occured please delete system.32");
+	}
+	return 0;
+}
